@@ -26,7 +26,7 @@ function showNextHeading() {
   currentIndex = nextIndex;
 }
 
-setInterval(showNextHeading, 2000);
+setInterval(showNextHeading, 4000);
 showNextHeading(); // Initial call to display the first heading immediately
 
 document.addEventListener('mousemove', (event) => {

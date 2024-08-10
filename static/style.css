@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-body {
+html, body {
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
@@ -113,7 +113,7 @@ body {
 	opacity: 0;
 	left: 50%;
 	transform: translateX(-150%);
-	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out, opacity 0.7s ease-in-out;
 }
 
 #slider>h1.active {
@@ -136,4 +136,26 @@ body {
 
 #alt3 {
 	color: #74c7ec;
+}
+
+@media (max-width: 768px) {
+    /* Disable parallax effect on mobile */
+    .parallax {
+        transform: none !important; /* Remove any transformations */
+        position: fixed; /* Optionally fix the position */
+    }
+
+    /* Ensure no clipping outside viewport */
+    body, html {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+	#slider>h1 {
+		user-select: none; /* Disable text selection */
+		-webkit-user-select: none; /* Safari */
+		-moz-user-select: none; /* Firefox */
+		-ms-user-select: none; /* Internet Explorer/Edge */
+		top: 40%;
+		font-size: 6.5vmax;
+	}
 }
