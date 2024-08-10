@@ -99,10 +99,10 @@ html, body {
 }
 
 #full-page-overlay {
+	box-sizing: border-box;
 	position: absolute;
 	width: 100%;
-	height: 100%;
-	border-radius: 25px;
+	height: 100dvh;
 }
 
 #slider>h1 {
@@ -147,7 +147,7 @@ html, body {
 
     /* Ensure no clipping outside viewport */
     body, html {
-        overflow-x: hidden; /* Prevent horizontal scrolling */
+        overflow: hidden; /* Prevent horizontal scrolling */
     }
 
     #slider>h1 {
@@ -160,8 +160,9 @@ html, body {
     }
 
     .social-button {
+	margin-top: -10%;
 	width: 10rem;
-	height: 10rem;
+	height: 7rem;
     }
 }
 
@@ -174,7 +175,7 @@ html, body {
 
     /* Ensure no clipping outside viewport */
     body, html {
-        overflow-x: hidden; /* Prevent horizontal scrolling */
+        overflow: hidden; /* Prevent horizontal scrolling */
     }
 
     #slider>h1 {
@@ -186,7 +187,7 @@ html, body {
     }
 
     .social-button {
-	margin-top: -20%;
+	margin-top: -48%;
 	width: 10rem;
 	height: 7rem;
     }
