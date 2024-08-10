@@ -1,6 +1,8 @@
 #!/bin/sh
-trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
+trap "trap - TERM && kill -- -$$" INT TERM EXIT
+set -a; . ./.env; set +a; # Exporting .env
 
 frpc -c ./frpc.toml &
+
 cargo r
 

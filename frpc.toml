@@ -1,0 +1,9 @@
+serverAddr = "{{ .Envs.FRPC_SERVER_IP }}"
+serverPort = {{ .Envs.FRPC_SERVER_PORT }}
+transport.tls.enable = true
+
+[[proxies]]
+name = "ammir.dev"
+type = "https"
+localPort = {{ .Envs.LOCAL_PORT }}
+customDomains = ["ammir.dev"]

@@ -1,5 +1,8 @@
 #!/bin/sh
-trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
+trap "trap - TERM && kill -- -$$" INT TERM EXIT
+
+set -a; . ./.env; set +a; # Exporting .env
+
 frpc -c ./frpc.toml &
 
 BINARY_PATH="./target/release/ammir-dev"
@@ -15,5 +18,4 @@ else
     cargo build --release
 fi
 
-# Run the binary
-"$BINARY_PATH"
+"$BINARY_PATH" 
